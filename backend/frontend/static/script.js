@@ -7,7 +7,17 @@
 // Select Canvas, Context, WebSocket Connection
 const canvas = document.getElementById("whiteboard");
 const ctx = canvas.getContext("2d");
-const ws = new WebSocket("ws://127.0.0.1:8000/ws"); // Connect to WebSocket server
+
+// Determine the WebSocket protocol based on the current page's protocol
+// If the site is served over HTTPS, use "wss", otherwise use "ws"
+const ws_scheme = window.location.protocol === "https:" ? "wss" : "ws";
+
+// Construct the WebSocket URL dynamically based on the current host
+const ws_url = `${ws_scheme}://${window.location.host}/ws`; // This ensures the WebSocket connection works in both local and deployed environments
+
+// Establish a WebSocket connection to the backend server
+const ws = new WebSocket(ws_url);
+
 
 // Select UI Elements
 const usernameScreen = document.getElementById("usernameScreen");
