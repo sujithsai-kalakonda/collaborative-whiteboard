@@ -25,8 +25,7 @@ A real-time collaborative whiteboard application where multiple users can draw t
 2. Run the WebSocket server:
 
    ```bash
-   cd backend
-   uvicorn main:app --reload
+   uvicorn backend.main:app --reload
    ```
 
 3. Open `http://127.0.0.1:8000/` in a browser.
