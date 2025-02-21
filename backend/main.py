@@ -7,7 +7,8 @@ FastAPI WebSocket Backend for Collaborative Whiteboard
 from fastapi import FastAPI, WebSocket
 from starlette.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from connections import manager
+from backend.connections import manager
+# from connections import manager
 import os
 
 app = FastAPI()
