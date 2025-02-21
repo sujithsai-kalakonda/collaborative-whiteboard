@@ -1,0 +1,94 @@
+/* 
+    Styles for the Collaborative Whiteboard
+    - Supports Light Mode & Dark Mode
+*/
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Default Light Mode */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Style for the whiteboard */
+canvas {
+    border: 2px solid black;
+    background-color: white;
+    display: block;
+    margin: auto;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Dark Mode Canvas */
+.dark-mode canvas {
+    background-color: #333;
+    border: 2px solid white;
+}
+
+/* Style for buttons */
+#colorPicker, #brushSize, #eraser, #clearCanvas, #darkModeToggle {
+    margin-bottom: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* Eraser & Clear Canvas Buttons */
+#eraser, #clearCanvas {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Clear Canvas Button */
+#clearCanvas {
+    background-color: blue;
+}
+
+/* Dark Mode Button */
+#darkModeToggle {
+    background-color: gray;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode #eraser, .dark-mode #clearCanvas, .dark-mode #darkModeToggle {
+    background-color: darkgray;
+    color: black;
+}
+
+/* Floating Username Styling */
+#usernamesContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interfering with clicks */
+}
+
+/* Style for Each Floating Username */
+.floating-username {
+    position: absolute;
+    font-size: 12px;
+    font-weight: bold;
+    color: blue;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+}
+

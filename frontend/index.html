@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Whiteboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Username Entry Screen -->
+    <div id="usernameScreen">
+        <h2>Enter Your Name to Join</h2>
+        <input type="text" id="username" placeholder="Your Name" maxlength="15">
+        <button id="enterBoard">Join Whiteboard</button>
+    </div>
+
+    <!-- Whiteboard Screen (Hidden Initially) -->
+    <div id="whiteboardScreen" style="display: none;">
+        <h1>Collaborative Whiteboard</h1>
+
+        <!-- Color Picker & Brush Size -->
+        <label for="colorPicker">Choose Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+        <label for="brushSize">Brush Size:</label>
+        <input type="range" id="brushSize" min="1" max="10" value="4">
+
+        <!-- Controls -->
+        <button id="eraser">Eraser</button>
+        <button id="clearCanvas">Clear Canvas</button>
+        <button id="darkModeToggle">🌙 Dark Mode</button>
+
+        <!-- The Whiteboard Canvas -->
+        <canvas id="whiteboard"></canvas>
+
+        <!-- Floating Usernames -->
+        <div id="usernamesContainer"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
