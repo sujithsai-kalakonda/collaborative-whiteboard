@@ -29,7 +29,7 @@ A real-time collaborative whiteboard application where multiple users can draw t
    uvicorn main:app --reload
    ```
 
-3. Open `frontend/index.html` in a browser.
+3. Open `http://127.0.0.1:8000/` in a browser.
 
 4. Enter your name and start drawing.
 
